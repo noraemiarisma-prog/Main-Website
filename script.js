@@ -1,51 +1,46 @@
-// Dark mode toggle
-const toggleBtn = document.getElementById("dark-mode-toggle");
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+// Dark Mode Toggle
+const darkModeBtn = document.getElementById('dark-mode-toggle');
+darkModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
 });
 
-// Lightbox
-const galleryImages = document.querySelectorAll(".gallery-grid img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeBtn = document.querySelector(".lightbox .close");
-const prevBtn = document.querySelector(".lightbox .prev");
-const nextBtn = document.querySelector(".lightbox .next");
-
-let currentIndex = 0;
-
-galleryImages.forEach((img, index) => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-    currentIndex = index;
+// Confetti
+const confettiBtn = document.getElementById('confetti-btn');
+confettiBtn.addEventListener('click', () => {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
   });
 });
 
-closeBtn.addEventListener("click", () => {
-  lightbox.style.display = "none";
+// Jumpscare Ghost
+const jumpscareBtn = document.getElementById('jumpscare-btn');
+const jumpscareImg = document.getElementById('jumpscare-img');
+const screamSound = document.getElementById('scream-sound');
+
+jumpscareBtn.addEventListener('click', () => {
+  screamSound.play();
+  jumpscareImg.classList.add('jumpscare-visible');
+
+  setTimeout(() => {
+    jumpscareImg.classList.remove('jumpscare-visible');
+  }, 800);
 });
 
-prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-  lightboxImg.src = galleryImages[currentIndex].src;
+// Lightbox Gallery
+const galleryImages = document.querySelectorAll('.gallery-grid img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = lightbox.querySelector('.close');
+
+galleryImages.forEach((img) => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
 });
 
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % galleryImages.length;
-  lightboxImg.src = galleryImages[currentIndex].src;
-});
-
-// Confetti button
-document.addEventListener("DOMContentLoaded", () => {
-  const confettiBtn = document.getElementById("confetti-btn");
-  if (confettiBtn) {
-    confettiBtn.addEventListener("click", () => {
-      confetti({
-        particleCount: 200,
-        spread: 80,
-        origin: { y: 0.6 }
-      });
-    });
-  }
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
 });
