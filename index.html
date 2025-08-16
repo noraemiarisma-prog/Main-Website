@@ -3,56 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xandre's Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <title>Xandre's First Website</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
 <body>
+  <!-- Navbar -->
   <header>
-    <h1>Xandre's site</h1>
-    <nav>
+    <nav class="navbar">
+      <h1>Welcome! Here is Xandre's first website</h1>
       <ul>
-        <li><a href="#" data-target="home">Menu</a></li>
-        <li><a href="#" data-target="settings">Settings</a></li>
-        <li><a href="#" data-target="info">Information</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#info">Information</a></li>
+        <li><a href="#gallery">Gallery</a></li>
       </ul>
+      <button id="dark-mode-toggle">🌙</button>
     </nav>
-    <button class="toggle-btn" id="toggleDark">🌙 Dark Mode</button>
   </header>
 
+  <!-- Sections -->
   <main>
-    <section id="home" class="active">
-      <div class="hero">
-        <h2>Welcome!</h2>
-        <p>Here is Xandre's first website</p>
-        <div>
-        </div>
-      </div>
+    <section id="menu">
+      <h2>Menu</h2>
+      <p>This is the menu section.</p>
     </section>
 
     <section id="settings">
       <h2>Settings</h2>
+      <p>Here you can toggle dark mode.</p>
     </section>
 
     <section id="info">
       <h2>Information</h2>
+      <p>Some information goes here.</p>
+      <!-- Celebrate Button -->
+      <button id="confetti-btn" class="confetti-button">🎉 Celebrate</button>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+      <h2>Our Gallery</h2>
+      <div class="gallery-grid">
+        <img src="photo1.jpg" alt="Photo 1">
+        <img src="photo2.jpg" alt="Photo 2">
+        <img src="photo3.jpg" alt="Photo 3">
+        <img src="photo4.jpg" alt="Photo 4">
+        <img src="photo5.jpg" alt="Photo 5">
+        <img src="photo6.jpg" alt="Photo 6">
+        <img src="photo7.jpg" alt="Photo 7">
+        <img src="photo8.jpg" alt="Photo 8">
+      </div>
     </section>
   </main>
 
-  <footer><section id="gallery" class="gallery">
-  <h2>Our Gallery</h2>
-  <div class="gallery-grid">
-    <img src="photo1.jpg" alt="Photo 1">
-    <img src="photo2.jpg" alt="Photo 2">
-    <img src="photo3.jpg" alt="Photo 3">
-    <img src="photo4.jpg" alt="Photo 4">
-    <img src="photo5.jpg" alt="Photo 5">
-    <img src="photo6.jpg" alt="Photo 6">
-    <img src="photo7.jpg" alt="Photo 7">
-    <img src="photo8.jpg" alt="Photo 8">
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Expanded view">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
   </div>
-  </section>
-    <p>© 2025 Xandre. All rights reserved.</p>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Xandre. All Rights Reserved.</p>
   </footer>
 
   <script src="script.js"></script>
