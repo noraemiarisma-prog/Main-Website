@@ -8,24 +8,10 @@ darkModeBtn.addEventListener('click', () => {
 const confettiBtn = document.getElementById('confetti-btn');
 confettiBtn.addEventListener('click', () => {
   confetti({
-    particleCount: 100,
-    spread: 70,
+    particleCount: 150,
+    spread: 100,
     origin: { y: 0.6 }
   });
-});
-
-// Jumpscare Ghost
-const jumpscareBtn = document.getElementById('jumpscare-btn');
-const jumpscareImg = document.getElementById('jumpscare-img');
-const screamSound = document.getElementById('scream-sound');
-
-jumpscareBtn.addEventListener('click', () => {
-  screamSound.play();
-  jumpscareImg.classList.add('jumpscare-visible');
-
-  setTimeout(() => {
-    jumpscareImg.classList.remove('jumpscare-visible');
-  }, 800);
 });
 
 // Lightbox Gallery
