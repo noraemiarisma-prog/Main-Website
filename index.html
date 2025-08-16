@@ -4,13 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Xandre's First Website</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Confetti Library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <h1>Welcome! Here is Xandre's first website</h1>
+    <h1 class="site-title">✨ Welcome! Here is Xandre's first website ✨</h1>
     <ul>
       <li><a href="#settings">Settings</a></li>
     </ul>
@@ -19,16 +26,16 @@
 
   <!-- Gallery Section -->
   <section id="gallery">
-    <h2>Our Gallery</h2>
+    <h2>📸 Our Gallery</h2>
     <div class="gallery-grid">
-      <img src="photo1.jpg" alt="Photo 1" />
-      <img src="photo2.jpg" alt="Photo 2" />
-      <img src="photo3.jpg" alt="Photo 3" />
-      <img src="photo4.jpg" alt="Photo 4" />
-      <img src="photo5.jpg" alt="Photo 5" />
-      <img src="photo6.jpg" alt="Photo 6" />
-      <img src="photo7.jpg" alt="Photo 7" />
-      <img src="photo8.jpg" alt="Photo 8" />
+      <img src="https://via.placeholder.com/150" alt="Photo 1" />
+      <img src="https://via.placeholder.com/150" alt="Photo 2" />
+      <img src="https://via.placeholder.com/150" alt="Photo 3" />
+      <img src="https://via.placeholder.com/150" alt="Photo 4" />
+      <img src="https://via.placeholder.com/150" alt="Photo 5" />
+      <img src="https://via.placeholder.com/150" alt="Photo 6" />
+      <img src="https://via.placeholder.com/150" alt="Photo 7" />
+      <img src="https://via.placeholder.com/150" alt="Photo 8" />
     </div>
   </section>
 
@@ -41,14 +48,17 @@
   </div>
 
   <!-- Settings Section -->
-  <section id="settings">
-    <h2>Settings</h2>
-    <p>Here you can customize options in the future.</p>
+  <section id="settings" class="settings-box">
+    <h2>⚙️ Settings</h2>
+    <p>Here you can personalize your website experience!</p>
   </section>
 
-  <!-- Confetti Button -->
-  <section>
+  <!-- Celebration & Ghost Section -->
+  <section class="celebration">
     <button id="confetti-btn" class="confetti-button">🎉 Celebrate</button>
+    <button id="jumpscare-btn" class="ghost-button">👻 Trigger Jumpscare</button>
+    <img id="jumpscare-img" src="ghost.png" alt="Ghost" class="jumpscare-image" />
+    <audio id="scream-sound" src="scream.mp3"></audio>
   </section>
 
   <!-- Footer -->
