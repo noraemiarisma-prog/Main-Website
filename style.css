@@ -159,6 +159,97 @@ body.dark-mode footer {
 
 body.dark-mode .settings-box {
   background-color: #444;
+}  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  user-select: none;
+}
+
+.lightbox .close {
+  top: 20px;
+  right: 30px;
+}
+
+.lightbox .prev {
+  top: 50%;
+  left: 20px;
+}
+
+.lightbox .next {
+  top: 50%;
+  right: 20px;
+}
+
+/* Settings */
+.settings-box {
+  padding: 20px;
+  background-color: #fff3e0;
+  font-size: 16px;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.confetti-button {
+  background-color: #ffb347;
+  color: #fff;
+}
+
+.ghost-button {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Jumpscare Ghost */
+.jumpscare-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 250px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+  z-index: 10000;
+}
+
+.jumpscare-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #f5e6d3;
+  margin-top: 20px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #222;
+  color: #f5f5f5;
+}
+
+body.dark-mode .navbar {
+  background-color: #333;
+}
+
+body.dark-mode footer {
+  background-color: #333;
+}
+
+body.dark-mode .settings-box {
+  background-color: #444;
 }  margin-top: 20px;
 }
 
